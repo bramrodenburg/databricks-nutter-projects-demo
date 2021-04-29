@@ -12,4 +12,9 @@ dbutils.notebook.exit(greeting)
 
 # COMMAND ----------
 
+secret = dbutils.secrets.get(scope="cicd", key="mytoken")
+print(secret)  # Will be redacted
+
+# COMMAND ----------
+
 # Change me: 987654321
