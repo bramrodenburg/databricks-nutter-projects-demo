@@ -7,13 +7,10 @@ if user_name == "DefaultUnknown":
   greeting = "ERROR"
 else:
   greeting = f"Hello {user_name}"
+  secret = dbutils.secrets.get(scope="cicd", key="mytoken")
+  print(secret)  # Will be redacted
   
 dbutils.notebook.exit(greeting)
-
-# COMMAND ----------
-
-secret = dbutils.secrets.get(scope="cicd", key="mytoken")
-print(secret)  # Will be redacted
 
 # COMMAND ----------
 
