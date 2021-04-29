@@ -8,10 +8,9 @@ if user_name == "DefaultUnknown":
 else:
   greeting = f"Hello {user_name}"
   secret = dbutils.secrets.get(scope="cicd", key="mytoken")
-  print(secret)  # Will be redacted
   
 dbutils.notebook.exit(greeting)
 
 # COMMAND ----------
 
-# Change me: 987654321
+# Change me: 5494987987
